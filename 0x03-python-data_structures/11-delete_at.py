@@ -2,9 +2,9 @@
 def delete_at(my_list=[], idx=0):
     new_list = []
     if idx < 0 or not my_list:
-        return None
+        return my_list
     elif idx > len(my_list):
-        return None
+        return my_list
     else:
         del my_list[idx]
     return my_list
