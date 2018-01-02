@@ -1,7 +1,14 @@
 # 0x05. Python - Exceptions
 ---
 ## Description
-Project 5 in High Level Programming series is about errors and exceptions handling in Python. These different tasks focus on how to use exceptions, handling them correctly, raising builtin exception and implementing a clean-up action after an exception.
+
+Project 5 in High Level Programming series is about:
+* Errors and exceptions handling in Python
+* How to use exceptions
+* Exception handling
+* Raising builtin exception
+* Implementing a clean-up action after an exception.
+
 ---
 File|Task
 ---|---
@@ -12,5 +19,6 @@ File|Task
 4-list_division.py|Function that divides element by element 2 lists.
 5-raise_exception.py|Function that raises a type exception.
 6-raise_exception_msg.py|Function that raises a name exception with a message.
+
 ## Author
-Sue Kalia
+Vasudha Kalia
