@@ -1,0 +1,30 @@
+Test File for function that prints text with 2 new lines after .?: characters
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hello? world.")
+Hello?
+<BLANKLINE>
+world.
+<BLANKLINE>
+>>> text_indentation("Hello" "works?")
+Helloworks?
+<BLANKLINE>
+>>> text_indentation("Hello, world. I am? am I:")
+Hello, world.
+<BLANKLINE>
+I am?
+<BLANKLINE>
+am I:
+<BLANKLINE>
+>>> text_indentation(154548)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation("Hello?World. ")
+Hello?
+<BLANKLINE>
+World.
+<BLANKLINE>
+<BLANKLINE>
+>>> text_indentation("")
+<BLANKLINE>
