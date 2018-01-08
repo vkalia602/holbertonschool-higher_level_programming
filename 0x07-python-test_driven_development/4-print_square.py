@@ -1,10 +1,15 @@
 #!/usr/bin/python3
+"""Prints square with # character
 
-"""Prints square with # character"""
+
+"""
 
 
 def print_square(size):
 
+    """ Function prints squares with #
+
+    """
     errormsg_0 = "size must be an integer"
     errormsg_1 = "size must be >= 0"
 
