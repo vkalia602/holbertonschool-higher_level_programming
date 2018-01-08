@@ -1,6 +1,13 @@
 #!/usr/bin/python3
-def matrix_divided(matrix, div):
+"""Module for dividing numbers in a matrix
 
+"""
+
+
+def matrix_divided(matrix, div):
+    """Function to divide numbers in matrix by div
+
+    """
     errormsg_1 = "matrix must be a matrix (list of lists) of integers/floats"
     errormsg_2 = "Each row of the matrix must have the same size"
     diverrormsg = "div must be a number"
@@ -22,7 +29,7 @@ def matrix_divided(matrix, div):
         if len(matrix[0]) is not len(row):
             raise TypeError(errormsg_2)
         for number in row:
-            if type(number) is not int:
+            if type(number) is not int and type(number) is not float:
                 raise TypeError(errormsg_1)
 
 # check if div type is int or float

@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """
-
-This module
+This module prints text with blank lines
 
 
 """
+
+
 def text_indentation(text):
 
     """
@@ -25,6 +26,6 @@ def text_indentation(text):
             if text[index - 1] in symb and text[index] is " ":
                 index += 1
         print("{}".format(text[index]), end="")
-        if text[index] in symb :
+        if text[index] in symb:
             print("\n")
         index += 1
