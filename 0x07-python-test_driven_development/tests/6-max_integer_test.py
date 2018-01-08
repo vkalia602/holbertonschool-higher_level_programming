@@ -7,6 +7,7 @@ import unittest
 
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     def test1(self):
         """test a list of ints
@@ -35,7 +36,7 @@ class TestMaxInteger(unittest.TestCase):
         """ tests for empty list
         expected return: None
         """
-        list1 = [ ]
+        list1 = []
         with self.assertRaises(TypeError):
             max_integer(list1)
 
@@ -46,12 +47,14 @@ class TestMaxInteger(unittest.TestCase):
         list1 = None
         with self.assertRaises(TypeError):
             max_integer(list1)
+
     def test5(self):
         """tests when list = None
         expected return: TypeError
         """
         with self.assertRaises(TypeError):
             max_integer("this string")
+
     def test6(self):
         """tests for list with negative numbers
         expected return: TypeError
