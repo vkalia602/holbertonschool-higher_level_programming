@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class Rectangle:
     """Class Rectangle instantiated by width
 

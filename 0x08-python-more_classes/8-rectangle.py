@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 
+
 class Rectangle:
     """Class Rectangle instantiated by width
 
     Args:
+
     width(int) - Width of the rectangle
     height(int) - height of the rectangle
+
+
     """
     number_of_instances = 0
     print_symbol = "#"
