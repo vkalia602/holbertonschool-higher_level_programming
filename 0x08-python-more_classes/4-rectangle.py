@@ -51,3 +51,6 @@ class Rectangle:
             if idx < self.height - 1:
                 new_string += '\n'
         return new_string
+
+    def __repr__(self):
+        return "Rectangle({}, {})".format(self.width, self.height)

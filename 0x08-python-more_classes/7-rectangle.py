@@ -6,9 +6,13 @@ class Rectangle:
     width(int) - Width of the rectangle
     height(int) - height of the rectangle
     """
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -22,6 +26,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
+
     @property
     def height(self):
         return (self.__height)
@@ -34,6 +39,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
     def area(self):
         return self.height * self.width
 
@@ -47,7 +53,14 @@ class Rectangle:
 
         for idx in range(self.height):
             for idx2 in range(self.width):
-                new_string += '#'
+                new_string += "{}".format(self.print_symbol)
             if idx < self.height - 1:
                 new_string += '\n'
         return new_string
+
+    def __repr__(self):
+        return "Rectangle({}, {})".format(self.width, self.height)
+
+    def __del__(self):
+        print("Bye Rectangle...")
+        Rectangle.number_of_instances -= 1
