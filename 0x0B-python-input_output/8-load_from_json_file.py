@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-Function that creates an Object from a “JSON file”
+function that Creates an Object from a “JSON file”
 
 
 """
+
 
 import json
 
