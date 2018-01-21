@@ -90,10 +90,10 @@ class Rectangle(Base):
                   format(self.id, self.x, self.y, self.width, self.height))
         return string
     def update(self, *args, **kwargs):
-        attr_arg = ["id", "width", "height", "x", "y"]
-        if kwargs is None:
+        if args != None and kwargs == None:
+            attr_arg = ["id", "width", "height", "x", "y"]
             for idx, arg in enumerate(args):
-                setattr(self, attr_arg[idx], arg)
-        if args is None:
-            for key, value in kwargs.iteritems():
-                setattr(self, key, value)
+                setattr(self, attr_arg[idx], args)
+        else:
+            for key in kwargs:
+                setattr(self, key, kwargs[key])
