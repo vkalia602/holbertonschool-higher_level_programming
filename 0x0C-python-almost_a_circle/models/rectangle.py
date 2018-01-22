@@ -89,11 +89,19 @@ class Rectangle(Base):
         string = ("[Rectangle] ({}) {}/{} - {}/{}".
                   format(self.id, self.x, self.y, self.width, self.height))
         return string
+
     def update(self, *args, **kwargs):
-        if args != None and kwargs == None:
+        if len(args) != 0:
             attr_arg = ["id", "width", "height", "x", "y"]
             for idx, arg in enumerate(args):
-                setattr(self, attr_arg[idx], args)
+                setattr(self, attr_arg[idx], arg)
         else:
             for key in kwargs:
                 setattr(self, key, kwargs[key])
+
+    def to_dictionary(self):
+        my_attrs = ["id", "height", "width", "x", "y"]
+        my_values = [self.id, self.height, self.width, self.x, self.y]
+        my_dict = {}
+        my_dict = dict(zip(my_attrs, my_values))
+        return my_dict
