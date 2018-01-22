@@ -46,3 +46,10 @@ class Square(Rectangle):
             attr_arg = ["id", "size", "x", "y"]
             for idx, arg in enumerate(args):
                 setattr(self, attr_arg[idx], arg)
+
+    def to_dictionary(self):
+        my_attrs = ["id", "size", "x", "y"]
+        my_values = [self.id, self.size, self.x, self.y]
+        my_dict = {}
+        my_dict = dict(zip(my_attrs, my_values))
+        return my_dict
