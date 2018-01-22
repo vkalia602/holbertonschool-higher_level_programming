@@ -25,6 +25,19 @@ class Base:
         my_file = "{}.json".format(cls.__name__)
         jstring = ""
         for elements in list_objs:
-            jstring += Base.to_json_string(elements)
+            my_dict = cls.to_dictionary(elements)
+            jstring += (Base.to_json_string(my_dict))
+            jstring += ", "
         with open(my_file, "w") as my_file:
             my_file.write(jstring)
+
+    @staticmethod
+    def from_json_string(json_string):
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+    
+
+    def update(self, *args, **kwargs):
+        
