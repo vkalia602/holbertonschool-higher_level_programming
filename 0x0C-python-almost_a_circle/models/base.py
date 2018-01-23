@@ -4,6 +4,8 @@ Module with class Base
 """
 
 import json
+
+
 class Base:
     __nb_objects = 0
     def __init__(self, id=None):
@@ -37,7 +39,17 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-    
+        from models.rectangle import Rectangle
+        from models.square import Square
 
-    def update(self, *args, **kwargs):
-        
+        if cls.__name__ is "Rectangle":
+            ins1 = Rectangle(1, 1)
+        if cls.__name__ is "Square":
+            ins1 = Square.update(1)
+        ins1.update(**dictionary)
+        return ins1
+
+#    def load_from_file(cls):
+ #       try:
+  #          filename = "{}.json".format(cls.__name__)
+   #         json.load(
