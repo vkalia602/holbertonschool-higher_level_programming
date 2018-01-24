@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+module for testing base class
+"""
 
 import json
 import unittest

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+Module for testing square class
+"""
 
 import unittest
 import json

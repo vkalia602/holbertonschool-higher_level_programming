@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+Module to test Rectangle class
+"""
 
 import unittest
 import json
