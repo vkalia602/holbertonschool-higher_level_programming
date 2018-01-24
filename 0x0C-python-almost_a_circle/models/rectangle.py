@@ -8,6 +8,9 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    """
+    class rectangle inheriting from Base Class
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -91,12 +94,16 @@ class Rectangle(Base):
         return string
 
     def update(self, *args, **kwargs):
+        """
+        Updates attributes with new values in the class
+        """
+
         if args is None and kwargs is None:
             return
         if len(args) != 0:
             attr_arg = ["id", "width", "height", "x", "y"]
             for idx, arg in enumerate(args):
-                if len(attr_arg)  == idx:
+                if len(attr_arg) == idx:
                     break
                 setattr(self, attr_arg[idx], arg)
         else:
@@ -104,6 +111,9 @@ class Rectangle(Base):
                 setattr(self, key, kwargs[key])
 
     def to_dictionary(self):
+        """
+        changes values and attributes into a dictionary form
+        """
         my_attrs = ["id", "height", "width", "x", "y"]
         my_values = [self.id, self.height, self.width, self.x, self.y]
         my_dict = {}
