@@ -45,11 +45,11 @@ class Test_Base(unittest.TestCase):
         json string
 
         """
+    def test_to_json(self):
+        jsonstring = Base.to_json_string(None)
+        self.assertEqual(jsonstring, '[]')
 
-#    def test_json_dump(self):
- #       r1 = Rectangle(10, 7, 2, 8)
-  #      dictionary = r1.to_dictionary()
-   #     json_dictionary = Base.to_json_string([dictionary])
-    #    jd = [{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]
-     #   self.assertEqual(jd, json_dictionary)
-
+    def test_to_json2(self):
+        jsonstring = Base.to_json_string({"x": 4})
+        print (jsonstring)
+        self.assertEqual(jsonstring, "[{'x':4}]")
