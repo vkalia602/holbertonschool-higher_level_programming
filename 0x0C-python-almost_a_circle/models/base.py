@@ -38,26 +38,30 @@ class Base:
         if list_objs is None:
             return []
         my_file = "{}.json".format(cls.__name__)
-        jstring = ""
+        lists = []
         for elements in list_objs:
-            my_dict = cls.to_dictionary(elements)
-            jstring += (Base.to_json_string(my_dict))
-            jstring += ", "
+            lists += [cls.to_dictionary(elements)]
+        jstring = Base.to_json_string(lists)
         with open(my_file, "w") as my_file:
             my_file.write(jstring)
 
     @staticmethod
     def from_json_string(json_string):
+        if json_string is None:
+            return
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
         from models.rectangle import Rectangle
         from models.square import Square
-
+        if dictionary is None:
+            return
         if cls.__name__ is "Rectangle":
             ins1 = Rectangle(1, 1)
         if cls.__name__ is "Square":
             ins1 = Square.update(1)
         ins1.update(**dictionary)
         return ins1
+
+ #   def load_from_file(cls): 
