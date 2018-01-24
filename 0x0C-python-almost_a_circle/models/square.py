@@ -22,6 +22,7 @@ class Square(Rectangle):
             y - new lines in the y axis
             id - number of objects
         """
+        self.size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
@@ -35,8 +36,8 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, size):
-        self.height = size
         self.width = size
+        self.height = size
 
     def update(self, *args, **kwargs):
         """
