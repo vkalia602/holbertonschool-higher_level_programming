@@ -2,7 +2,6 @@
 """
 module for testing base class
 """
-
 import json
 import unittest
 from models.base import Base
