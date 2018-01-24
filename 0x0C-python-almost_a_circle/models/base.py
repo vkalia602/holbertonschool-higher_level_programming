@@ -1,12 +1,26 @@
 #!/usr/bin/python3
 
+"""
+Module for Base class
+"""
+
+
 import json
 
 
 class Base:
+    """
+    class Base
+    Args:
+        nb_objects - Keep track of instances
+    """
+
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        instantiation of Base class
+        """
         if id is None:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
