@@ -48,7 +48,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         if json_string is None:
-            return
+            return []
         return json.loads(json_string)
 
     @classmethod
@@ -64,4 +64,3 @@ class Base:
         ins1.update(**dictionary)
         return ins1
 
- #   def load_from_file(cls): 
