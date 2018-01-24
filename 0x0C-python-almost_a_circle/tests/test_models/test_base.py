@@ -42,12 +42,11 @@ class Test_Base(unittest.TestCase):
         b = Base({"hello": 1, "world": 2})
         self.assertEqual({"hello": 1, "world": 2}, b.id)
 
+    def test_to_json(self):
         """
         Series of tests for @staticmethod that changes dictionary into a
         json string
 
         """
-    def test_to_json(self):
         jsonstring = Base.to_json_string(None)
         self.assertEqual(jsonstring, '[]')
-

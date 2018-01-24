@@ -228,6 +228,7 @@ class Testrectangle(unittest.TestCase):
         self.assertEqual(my_dict, dict_out)
 
     def test_to_dict24(self):
+    """test for dictionary representation"""
         Base._Base__nb_objects = 0
         r1 = Rectangle(10, 10, 10, 10)
         my_dict = r1.to_dictionary()
