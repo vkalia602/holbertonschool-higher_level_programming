@@ -36,9 +36,8 @@ class Test_Base(unittest.TestCase):
 
     def test_id4(self):
         """test for a dict passed as an argument"""
-        b = Base({"hello":1, "world":2})
-        self.assertEqual({"hello":1, "world":2}, b.id)
-
+        b = Base({"hello": 1, "world": 2})
+        self.assertEqual({"hello": 1, "world": 2}, b.id)
 
         """
         Series of tests for @staticmethod that changes dictionary into a

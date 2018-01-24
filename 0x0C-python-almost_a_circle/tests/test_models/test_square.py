@@ -9,6 +9,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class Testrectangle(unittest.TestCase):
 
     """
@@ -40,7 +41,7 @@ class Testrectangle(unittest.TestCase):
     def test_set_values_3(self):
         """pass in non int values"""
         with self.assertRaises(TypeError) as error:
-           Square("hello", "world", "Hello", "world")
+            Square("hello", "world", "Hello", "world")
         self.assertEqual(str(error.exception), "width must be an integer")
 
     def test_set_values_4(self):
@@ -185,7 +186,7 @@ class Testrectangle(unittest.TestCase):
         capturedOutput = io.StringIO()
         sys.stdout = capturedOutput
         r1 = Square(10, 10, 10, 10)
-        r1.update(size=2, x=2, id=4, y= 8)
+        r1.update(size=2, x=2, id=4, y=8)
         string = "[Square] (4) 2/8 - 2\n"
         print(r1)
         self.assertEqual(capturedOutput.getvalue(), string)

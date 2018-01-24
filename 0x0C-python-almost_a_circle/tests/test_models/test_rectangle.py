@@ -9,6 +9,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class Testrectangle(unittest.TestCase):
 
     """
@@ -199,7 +200,7 @@ class Testrectangle(unittest.TestCase):
         capturedOutput = io.StringIO()
         sys.stdout = capturedOutput
         r1 = Rectangle(10, 10, 10, 10)
-        r1.update(height=1, width=1, x=2, id=4, y= 8)
+        r1.update(height=1, width=1, x=2, id=4, y=8)
         string = "[Rectangle] (4) 2/8 - 1/1\n"
         print(r1)
         self.assertEqual(capturedOutput.getvalue(), string)
