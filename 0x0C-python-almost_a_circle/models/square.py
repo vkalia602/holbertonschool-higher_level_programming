@@ -22,7 +22,6 @@ class Square(Rectangle):
             y - new lines in the y axis
             id - number of objects
         """
-        self.size = size
         super().__init__(self.size, self.size, x, y, id)
 
     def __str__(self):
