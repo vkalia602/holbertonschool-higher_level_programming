@@ -22,7 +22,7 @@ class Square(Rectangle):
             y - new lines in the y axis
             id - number of objects
         """
-        super().__init__(self.size, self.size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         p = "[square] ({}) {}/{} - {}".format(self.id, self.x,
