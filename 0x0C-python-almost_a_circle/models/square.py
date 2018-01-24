@@ -50,6 +50,8 @@ class Square(Rectangle):
         else:
             attr_arg = ["id", "size", "x", "y"]
             for idx, arg in enumerate(args):
+                if len(attr_arg) == idx:
+                    break
                 setattr(self, attr_arg[idx], arg)
 
     def to_dictionary(self):
