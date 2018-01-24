@@ -51,7 +51,3 @@ class Test_Base(unittest.TestCase):
         jsonstring = Base.to_json_string(None)
         self.assertEqual(jsonstring, '[]')
 
-    def test_to_json2(self):
-        jsonstring = Base.to_json_string({"x": 4})
-        print (jsonstring)
-        self.assertEqual(jsonstring, "[{'x':4}]")
