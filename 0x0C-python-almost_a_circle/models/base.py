@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-"""
-Module with class Base
-"""
 
 import json
 
 
 class Base:
     __nb_objects = 0
+
     def __init__(self, id=None):
         if id is None:
             Base.__nb_objects += 1
@@ -48,8 +46,3 @@ class Base:
             ins1 = Square.update(1)
         ins1.update(**dictionary)
         return ins1
-
-#    def load_from_file(cls):
- #       try:
-  #          filename = "{}.json".format(cls.__name__)
-   #         json.load(
