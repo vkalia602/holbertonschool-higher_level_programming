@@ -60,6 +60,6 @@ class Base:
         if cls.__name__ is "Rectangle":
             ins1 = Rectangle(1, 1)
         if cls.__name__ is "Square":
-            ins1 = Square.update(1)
+            ins1 = Square(1)
         ins1.update(**dictionary)
         return ins1
