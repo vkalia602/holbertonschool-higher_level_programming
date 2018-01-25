@@ -63,4 +63,3 @@ class Base:
             ins1 = Square.update(1)
         ins1.update(**dictionary)
         return ins1
-
