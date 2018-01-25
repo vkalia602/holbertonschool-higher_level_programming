@@ -35,10 +35,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        if list_objs is None:
-            return []
         my_file = "{}.json".format(cls.__name__)
         lists = []
+        if list_objs is None:
+            list_objs = []
         for elements in list_objs:
             lists += [cls.to_dictionary(elements)]
         jstring = Base.to_json_string(lists)
