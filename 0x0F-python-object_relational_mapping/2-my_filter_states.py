@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Script that takes an argument and displays all values in the states table of
  hbtn_0e_0usa where name mateches the argument
