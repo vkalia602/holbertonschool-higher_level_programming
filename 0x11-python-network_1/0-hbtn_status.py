@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This script
+"""This script fetches "https://intranet.hbtn.io/status"
 """
 
 if __name__ == "__main__":
