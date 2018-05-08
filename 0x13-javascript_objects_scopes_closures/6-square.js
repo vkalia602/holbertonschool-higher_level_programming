@@ -7,13 +7,18 @@ class Square extends Rectangle {
   constructor (size) {
     super(size, size);
   }
-  charPrint (c = 'X') {
-    for (let i = 0; i < this.height; i++) {
-      let strn = '';
-      for (let j = 0; j < this.width; j++) {
-        strn = strn + c;
-      }
-      console.log(strn);
+  charPrint (c) {
+    if (c === undefined){
+	super.print()
+    }
+    else{
+	for (let i = 0; i < this.height; i++) {
+	    let strn = '';
+	    for (let j = 0; j < this.width; j++) {
+		strn = strn + c;
+	    }
+	    console.log(strn);
+	}
     }
   }
 }
