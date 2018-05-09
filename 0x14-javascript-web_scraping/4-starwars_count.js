@@ -6,7 +6,7 @@ let characslist = [];
 let movieinfo = [];
 let request = require('request');
 let search = 'https://swapi.co/api/people/18/';
-let search2 = 'https://swapi.co/api/people/18/';
+let search2 = 'http://swapi.co/api/people/18/';
 let requestURL = process.argv[2];
 
 request(requestURL, function (err, response, body) {
